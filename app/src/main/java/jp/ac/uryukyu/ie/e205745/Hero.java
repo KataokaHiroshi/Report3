@@ -14,18 +14,30 @@ public class Hero {
     private int attack;
     private boolean dead;
 
+    /**
+     * Mainクラスで敵の名前を返す。
+     */
     public String getName(){
         return this.name;
     }
 
+    /**
+     * Mainクラスで敵のHPの値を返す。
+     */
     public int getHitPoint(){
         return this.hitPoint;
     }
 
+    /**
+     * Mainクラスで敵の攻撃力の値を返す。
+     */
     public int getAttack(){
         return this.attack;
     }
 
+    /**
+     * 敵の生死を判断する。HPが0を下回ったらdeadの値をtrue(死亡)にする。
+     */
     public boolean setDead(){
         if( hitPoint < 0 ) {
             this.dead = true;

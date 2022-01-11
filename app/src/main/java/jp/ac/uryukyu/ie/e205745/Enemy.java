@@ -5,7 +5,7 @@ package jp.ac.uryukyu.ie.e205745;
  *  String name; //敵の名前
  *  int hitPoint; //敵のHP
  *  int attack; //敵の攻撃力
- *  boolean dead; //敵の生死状態。true=死亡。
+ *  boolean dead; //敵の生死状態。true=死亡。*  getName(); //敵の名前を返す。
  * Created by tnal on 2016/11/13.
  */
 public class Enemy {
@@ -14,25 +14,36 @@ public class Enemy {
     private int attack;
     private boolean dead;
 
+    /**
+     * Mainクラスで敵の名前を返す。
+     */
     public String getName(){
         return this.name;
     }
 
+    /**
+     * Mainクラスで敵のHPの値を返す。
+     */
     public int getHitPoint(){
         return this.hitPoint;
     }
 
+    /**
+     * Mainクラスで敵の攻撃力の値を返す。
+     */
     public int getAttack(){
         return this.attack;
     }
 
+    /**
+     * 敵の生死を判断する。HPが0を下回ったらdeadの値をtrue(死亡)にする。
+     */
     public boolean setDead(){
         if( hitPoint < 0 ) {
             this.dead = true;
         }
         return this.dead;
     }
-
     /**
      * コンストラクタ。名前、最大HP、攻撃力を指定する。
      * @param name モンスター名
